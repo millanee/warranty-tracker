@@ -1,0 +1,105 @@
+name: User Story
+description: Create a user-focused requirement for the product backlog
+title: "[US] "
+labels: []
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        All development content must be written in English.
+        User-facing application text must be written in German.
+
+  - type: input
+    id: user-role
+    attributes:
+      label: User role
+      description: Who needs this functionality?
+      placeholder: "Example: A new user"
+    validations:
+      required: true
+
+  - type: input
+    id: user-goal
+    attributes:
+      label: User goal
+      description: What does the user want to do?
+      placeholder: "Example: View an empty product overview"
+    validations:
+      required: true
+
+  - type: input
+    id: user-benefit
+    attributes:
+      label: User benefit
+      description: Why does the user need this functionality?
+      placeholder: "Example: Understand how to add the first product"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Add relevant product and functional context.
+      placeholder: |
+        Describe the intended behavior and relevant context.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Enter testable acceptance criteria as a checklist.
+      placeholder: |
+        - [ ] The user can...
+        - [ ] The application displays...
+        - [ ] The implementation matches the linked Figma frame.
+    validations:
+      required: true
+
+  - type: input
+    id: figma
+    attributes:
+      label: Figma design
+      description: Link the relevant Figma frame or flow.
+      placeholder: "https://www.figma.com/design/..."
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: Explicitly list functionality that must not be implemented.
+      placeholder: |
+        - Feature not included in this story
+        - Future enhancement
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List related stories, technical decisions, or blockers.
+      placeholder: |
+        None
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical notes
+      description: Add only necessary technical constraints.
+      placeholder: |
+        Data must remain on the device.
+        Do not add a backend.
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Definition of Ready
+      options:
+        - label: The story provides a clear user benefit.
+        - label: The acceptance criteria are testable.
+        - label: The scope and exclusions are clear.
+        - label: The required design is available or not needed.
+        - label: The story is small enough to complete within one sprint.
