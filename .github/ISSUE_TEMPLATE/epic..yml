@@ -1,0 +1,57 @@
+name: Epic
+description: Create a high-level product area containing related user stories
+title: "[EPIC] "
+labels: []
+assignees: []
+
+body:
+  - type: input
+    id: epic-name
+    attributes:
+      label: Epic name
+      description: Enter the name of the product area.
+      placeholder: "Example: Product Management"
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the outcome this epic should achieve.
+      placeholder: |
+        Explain the user or product outcome covered by this epic.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: List the functionality covered by this epic.
+      placeholder: |
+        - Functionality A
+        - Functionality B
+        - Functionality C
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: List related functionality that is not included.
+      placeholder: |
+        - Future functionality
+        - Functionality belonging to another epic
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success criteria
+      description: Explain when the epic can be considered complete.
+      placeholder: |
+        - [ ] Users can complete the relevant end-to-end flow.
+        - [ ] All related MVP user stories are complete.
+    validations:
+      required: true
