@@ -1,80 +1,200 @@
 # MVP Scope
 
-## Product Goal
+## MVP Objective
 
-Warranty Tracker helps users store purchase information and receipts, calculate
-relevant expiration dates and understand the difference between a voluntary
-manufacturer warranty and statutory defect rights.
+The MVP should test whether consumers are willing to register purchases and
+store receipts in an app in order to manage warranty and statutory rights
+information.
 
-## Target Group
+The first version must remain small, offline-capable, and technically manageable
+for a solo developer.
 
-Consumers in Germany who purchase electronics, household appliances and other
-higher-value physical products from commercial sellers.
+## Target Market
 
-## MVP Features
+The MVP targets consumers in Germany.
 
-### Product management
+## Supported Platforms
 
-- Create a product manually
-- Edit a product
-- Delete a product
-- View all saved products
-- View product details
+- Android
+- iOS
 
-### Purchase information
+The application will be developed using Flutter and Dart with one shared
+codebase.
 
-- Product name
-- Category
-- Merchant
-- Price
-- Purchase date
-- Optional delivery date
-- New or used condition
+## Required MVP Features
 
-### Receipt management
+### 1. Manual Product Registration
 
-- Take a receipt photo
-- Select an existing image
-- Store the receipt locally
-- Display the stored receipt
+The user can manually enter:
 
-### Expiration dates
+- product name,
+- category,
+- purchase date,
+- purchase price,
+- retailer,
+- manufacturer warranty duration.
 
-- Calculate the estimated statutory expiration date
-- Store an optional manufacturer warranty
-- Calculate the manufacturer warranty expiration date
-- Distinguish active, expiring soon and expired entries
+All labels, validation messages, and buttons shown in the UI must be written
+in German.
 
-### Notifications
+### 2. Receipt Capture
 
-- Local notifications
-- Reminder 90 days before expiration
-- Reminder 30 days before expiration
-- Reminder 7 days before expiration
+The user can:
 
-### Consumer information
+- take a receipt photo using the device camera, or
+- select an existing image from the device.
 
-- Explain warranty and statutory defect rights
-- Provide a basic complaint checklist
-- Display a clear legal disclaimer
+The receipt image is stored locally and linked to the corresponding product.
 
-## Privacy Principles
+### 3. Local Product Storage
 
-- No user account
+Product information and receipt references are stored locally on the device.
+
+Stored products must remain available after the application is closed and
+reopened.
+
+### 4. Product Overview
+
+The user can view a list of stored products.
+
+Products may be grouped or visually categorized by status:
+
+- expiring soon,
+- active,
+- expired.
+
+The corresponding UI labels must be displayed in German.
+
+### 5. Product Details
+
+The user can open a stored product and view:
+
+- product information,
+- purchase information,
+- receipt image,
+- manufacturer warranty end date,
+- statutory rights end date,
+- current deadline status.
+
+### 6. Deadline Calculation
+
+The application calculates:
+
+- the end date of the manufacturer warranty,
+- the end date of the relevant statutory rights period.
+
+The manufacturer warranty duration can be configured by the user.
+
+The initial statutory rights logic is designed for the German market.
+
+Legal assumptions must be documented and must not be silently hard-coded
+without explanation.
+
+### 7. Local Notifications
+
+The application can schedule local notifications before a relevant deadline.
+
+Initial reminder intervals:
+
+- 90 days before,
+- 30 days before,
+- 7 days before.
+
+Notifications must work without a backend.
+
+### 8. Consumer Information Module
+
+The application contains general information explaining:
+
+- manufacturer warranties,
+- statutory consumer rights,
+- the difference between the two concepts.
+
+The content must be written in clear German.
+
+The application must explicitly state that the information is general consumer
+information and not legal advice.
+
+### 9. Complaint Checklist
+
+The application provides a simple checklist for defective products.
+
+Possible checklist items include:
+
+- open the stored receipt,
+- verify the purchase date,
+- check the displayed deadlines,
+- document the defect,
+- contact the retailer or manufacturer,
+- determine whether the case concerns a warranty or statutory rights.
+
+The checklist shown to users must be written in German.
+
+## Explicitly Excluded from the MVP
+
 - No backend
-- No cloud storage
-- No analytics in the first version
-- Purchase data remains on the device
+- No user accounts
+- No login
+- No cloud synchronization
+- No synchronization between devices
+- No OCR receipt recognition
+- No automatic email import
+- No family sharing
+- No automatic retailer contact
+- No automatic complaint submission
+- No binding legal assessment
+- No individualized legal advice
+- No support for countries outside Germany
+- No web application
+- No desktop application
+- No subscription model
+- No advertising during the initial development sprints
 
-## Not Included in the MVP
+## Language Requirements
 
-- OCR receipt recognition
-- Email receipt import
-- Cloud synchronization
-- Family sharing
-- User accounts
-- Social features
-- Advertising
-- Subscriptions
-- Automatic legal assessment
-- Automatic manufacturer warranty lookup
+### Development Language
+
+English must be used for:
+
+- source code,
+- file names,
+- classes,
+- functions,
+- variables,
+- code comments,
+- technical documentation,
+- GitHub issues,
+- user stories,
+- acceptance criteria,
+- test names,
+- commit messages,
+- pull request descriptions,
+- Cursor configuration,
+- AI prompts.
+
+### Application Language
+
+German must be used for all user-facing content, including:
+
+- screen titles,
+- navigation labels,
+- buttons,
+- form labels,
+- validation messages,
+- empty states,
+- error messages,
+- notification content,
+- information texts,
+- complaint guidance.
+
+## Scope Control
+
+A feature outside this document must not be implemented unless it has first
+been:
+
+1. added to the Product Backlog,
+2. described as a user story or technical task,
+3. prioritized,
+4. assigned to a sprint.
+
+AI coding tools must not introduce features outside the active user story.
