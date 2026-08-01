@@ -1,0 +1,170 @@
+---
+alwaysApply: true
+---
+
+---
+description: Core project rules for the German warranty and statutory rights tracker
+alwaysApply: true
+---
+
+# Project Context
+
+This project is a Flutter mobile application for Android and iOS.
+
+The application helps consumers in Germany:
+
+- register purchased products,
+- store receipt images locally,
+- track manufacturer warranty periods,
+- track statutory consumer rights periods,
+- receive local deadline reminders,
+- access general consumer information.
+
+The initial target market is Germany.
+
+# Language Requirements
+
+All development-related content must be written in English, including:
+
+- source code,
+- file names,
+- classes,
+- functions,
+- variables,
+- code comments,
+- documentation,
+- tests,
+- test descriptions,
+- GitHub issues,
+- commit messages,
+- pull request descriptions,
+- AI prompts.
+
+All user-facing application content must be written in German, including:
+
+- screen titles,
+- navigation labels,
+- buttons,
+- form labels,
+- hints,
+- validation messages,
+- empty states,
+- error messages,
+- dialog text,
+- notification content,
+- consumer information,
+- complaint guidance.
+
+Do not use German names for code identifiers.
+
+# MVP Boundaries
+
+The MVP must remain offline-first and local-only.
+
+The MVP includes:
+
+- manual product registration,
+- local product storage,
+- receipt image capture and selection,
+- local receipt storage,
+- product overview and product details,
+- manufacturer warranty calculations,
+- statutory rights calculations for the German market,
+- local notifications,
+- general consumer information,
+- a basic complaint checklist.
+
+The MVP does not include:
+
+- a backend,
+- user accounts,
+- login,
+- cloud synchronization,
+- OCR,
+- automatic email import,
+- family sharing,
+- automatic complaint submission,
+- individualized legal advice,
+- support for countries outside Germany.
+
+Do not implement functionality outside the active GitHub user story.
+
+# Flutter Development
+
+- Use Flutter and Dart.
+- Use Dart null safety.
+- Follow the existing project structure.
+- Keep widgets small and focused.
+- Separate UI, business logic, and local data access where appropriate.
+- Do not place database logic directly inside UI widgets.
+- Reuse existing components before creating new ones.
+- Do not add a package unless it is required for the active user story.
+- Explain why a new package is necessary before adding it.
+- Do not create unnecessary abstractions or empty architecture layers.
+- Do not refactor unrelated code.
+- Do not generate HTML, CSS, React, or other web code.
+
+# Figma Implementation
+
+Figma is the visual source of truth for approved screens.
+
+When implementing a Figma design:
+
+- inspect the linked Figma frame before writing code,
+- implement the design using Flutter widgets,
+- use the existing application theme,
+- reuse colors, typography, spacing, and components,
+- support relevant mobile screen sizes,
+- consider empty, filled, validation, and error states,
+- do not invent missing interactions without stating the assumption,
+- compare the completed Flutter screen with the Figma design.
+
+# Legal Content
+
+The application provides general consumer information and does not provide
+individualized legal advice.
+
+- Do not silently create or modify legal claims.
+- Do not present calculated dates as a guaranteed legal assessment.
+- Use only approved German consumer-information text.
+- Clearly distinguish manufacturer warranty from statutory consumer rights.
+- Include the approved legal-information disclaimer where required.
+
+# Working Process
+
+Before implementing a user story:
+
+1. Read the complete user story.
+2. Read every acceptance criterion.
+3. Inspect the relevant existing files.
+4. Inspect the linked Figma frame when applicable.
+5. Explain the proposed implementation plan.
+6. List the files expected to change.
+7. Identify assumptions or unresolved questions.
+8. Do not modify code until the implementation scope is clear.
+
+During implementation:
+
+- Work only on the active user story.
+- Make small and reviewable changes.
+- Preserve existing working functionality.
+- Do not add unrelated features.
+- Do not execute destructive commands without explicit approval.
+
+After implementation:
+
+1. Format the code.
+2. Run `flutter analyze`.
+3. Run the relevant tests.
+4. Check every acceptance criterion individually.
+5. Report all changed files.
+6. Report test and analysis results honestly.
+7. Do not claim that the story is complete if verification failed.
+
+# Testing
+
+- Add unit tests for business logic.
+- Add widget tests for important UI behavior.
+- Test validation, empty, and error states where applicable.
+- Do not remove or weaken existing tests.
+- All relevant tests must pass before a story is considered complete.
